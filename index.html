@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weronika Sobiech - Software Engineer</title>
+    <style>
+        :root {
+            --primary: #f38020; /* Cloudflare Orange */
+            --bg: #ffffff;
+            --gray: #f4f4f5;
+            --text: #2d3748;
+            --code-bg: #edf2f7;
+        }
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg);
+        }
+        header {
+            border-bottom: 2px solid var(--text);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.8rem;
+            color: var(--text);
+        }
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .summary {
+            background: var(--gray);
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        h2 {
+            color: var(--text);
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
+        }
+        h3 {
+            margin: 1rem 0 0 0;
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+        .date {
+            font-size: 0.95rem;
+            color: #718096;
+            font-weight: 600;
+        }
+        .tech-stack {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85rem;
+            background: var(--code-bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+        ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+        li { margin-bottom: 0.5rem; }
+        
+        .skills-section ul { list-style: none; padding-left: 0; }
+        .skills-section li {
+            margin-bottom: 1rem;
+        }
+        .skills-section strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Weronika Sobiech</h1>
+        <div class="contact-info">
+            <span>✉️ <a href="mailto:wweronika.sobiech@gmail.com">wweronika.sobiech@gmail.com</a></span>
+            <span>📱 +48 601 246 246</span>
+            <span>💻 <a href="https://github.com/Werka0202" target="_blank">github.com/Werka0202</a></span>
+        </div>
+    </header>
+
+    <div class="summary">
+        Dedicated Software Engineering student at 42 Warsaw with a strong background in general management and operations. Transitioning from leading teams, optimizing budgets, and automating administrative processes to solving complex technical problems through code. Passionate about low-level programming, concurrency, and algorithms. Seeking a Software Engineering Internship at Cloudflare to leverage strong analytical skills, systems thinking, and the ability to thrive under time pressure in building resilient internet infrastructure.
+    </div>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2>Education & Technical Projects</h2>
+                
+				<div class="item-header">
+                    <h3>42 Warsaw | Software Engineering Student</h3>
+                    <span class="date">Expected June 2028</span>
+                </div>
+                <ul>
+                    <li><strong>Codexion [WIP]:</strong> Developing a multi-threaded resource scheduling and concurrency simulator in C. Actively managing parallel execution using <span class="tech-stack">pthread</span> and preventing race conditions/deadlocks using <span class="tech-stack">pthread_mutex</span>. Implemented support for FIFO and EDF scheduling algorithms.</li>
+                    <li><strong>A-Maze-ing [Team Project]:</strong> Collaborated with a team of developers to build a Python-based maze generation algorithm. Engineered the logic to generate complex mazes and reliably export them into a strictly formatted hexadecimal output file. Managed version control workflows (Git) and technical responsibilities.</li>
+                    <li><strong>push_swap:</strong> Developed a highly optimized sorting algorithm using two stacks, focusing on minimizing the total number of operations and understanding time complexity (Big O notation).</li>
+                    <li><strong>libft & get_next_line:</strong> Recreated over 40 standard C library functions from scratch and programmed a function for reading lines from file descriptors, mastering memory allocation, pointers, and preventing memory leaks.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Professional Experience</h2>
+                
+                <div class="item-header">
+                    <h3>General Manager | SPATIF</h3>
+                    <span class="date">Jun 2024 - Jun 2025</span>
+                </div>
+                <ul>
+                    <li>Implemented procedures to increase operational efficiency, successfully automating administrative processes.</li>
+                    <li>Supervised operational budgets and cost control, significantly increasing financial efficiency and eliminating unnecessary expenses.</li>
+                    <li>Managed relationships with key suppliers and partners, negotiating optimal terms and optimizing the supply chain.</li>
+                </ul>
+
+                <div class="item-header">
+                    <h3>Manager | Peaches Gastro Girls & Klub SPATIF</h3>
+                    <span class="date">Sep 2022 - Jun 2024</span>
+                </div>
+                <ul>
+                    <li>Managed complex financial settlements and billing processes between partner companies, ensuring high accuracy and precision.</li>
+                    <li>Coordinated large-scale events and exclusive venue reservations, optimizing resource utilization and ensuring client satisfaction.</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside>
+            <section class="skills-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <strong>Languages & Technologies</strong>
+                        C, Python, Bash/Shell, Git, GitHub, Linux/Unix.
+                    </li>
+                    <li>
+                        <strong>Core Concepts</strong>
+                        Multithreading (pthreads, mutexes), Resource Allocation, Data Structures, Algorithms (Sorting, Optimization), Memory Management.
+                    </li>
+                    <li>
+                        <strong>Soft Skills</strong>
+                        Holistic thinking, Teamwork, Empathy, Initiative, Working under time pressure.
+                    </li>
+                    <li>
+                        <strong>Languages</strong>
+                        English (C1), Polish (Native).
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+</body>
+</html>
