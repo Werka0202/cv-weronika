@@ -4,105 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weronika Sobiech - Software Engineer</title>
+    <meta name="description" content="Weronika Sobiech - Software Engineering student at 42 Warsaw. C, Python, concurrency, LLM tooling.">
     <style>
         :root {
             --primary: #f38020;
+            --primary-dark: #c2410c;
             --bg: #ffffff;
             --gray: #f4f4f5;
             --text: #2d3748;
+            --muted: #718096;
             --code-bg: #edf2f7;
+            --line: #e2e8f0;
         }
+        * { box-sizing: border-box; }
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.55;
             color: var(--text);
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
             background: var(--bg);
         }
+        a { color: var(--primary-dark); }
         header {
             border-bottom: 2px solid var(--text);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
+            padding-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
         h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2.8rem;
-            color: var(--text);
+            margin: 0;
+            font-size: 2.6rem;
+            line-height: 1.1;
+        }
+        .role {
+            margin: 0.3rem 0 0.8rem 0;
+            font-size: 1.1rem;
+            color: var(--muted);
+            font-weight: 600;
         }
         .contact-info {
             display: flex;
-            gap: 20px;
+            gap: 6px 20px;
             flex-wrap: wrap;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
         .contact-info a {
-            color: var(--primary);
+            color: var(--primary-dark);
             text-decoration: none;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
+        .contact-info a:hover { text-decoration: underline; }
         .summary {
             background: var(--gray);
-            padding: 1.5rem;
+            padding: 1.1rem 1.4rem;
             border-left: 4px solid var(--primary);
-            margin-bottom: 2.5rem;
-            font-size: 1.05rem;
+            margin-bottom: 1.8rem;
+            font-size: 1.02rem;
         }
         .container {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 3rem;
+            gap: 2.5rem;
         }
-        @media (max-width: 768px) {
-            .container { grid-template-columns: 1fr; gap: 2rem; }
+        @media screen and (max-width: 768px) {
+            body { padding: 1rem; }
+            h1 { font-size: 2rem; }
+            .container { grid-template-columns: 1fr; gap: 1.5rem; }
+            .item-header { flex-direction: column; }
         }
         h2 {
-            color: var(--text);
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-            font-size: 1.5rem;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 0.4rem;
+            margin: 1.6rem 0 0.6rem 0;
+            font-size: 1.25rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+        section:first-child h2 { margin-top: 0; }
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.2rem;
+            gap: 1rem;
         }
         h3 {
             margin: 1rem 0 0 0;
-            font-size: 1.2rem;
-            color: var(--text);
+            font-size: 1.08rem;
         }
+        h3 a { text-decoration: none; }
+        h3 a:hover { text-decoration: underline; }
         .date {
-            font-size: 0.95rem;
-            color: #718096;
+            font-size: 0.9rem;
+            color: var(--muted);
             font-weight: 600;
+            white-space: nowrap;
+        }
+        .stack {
+            margin: 0.15rem 0 0 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.8rem;
+            color: #4a5568;
         }
         .tech-stack {
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.85rem;
+            font-size: 0.85em;
             background: var(--code-bg);
-            padding: 0.2rem 0.5rem;
+            padding: 0.05rem 0.35rem;
             border-radius: 4px;
             color: #4a5568;
         }
-        ul { padding-left: 1.2rem; margin-top: 0.5rem; }
-        li { margin-bottom: 0.5rem; }
-        
-        .skills-section ul { list-style: none; padding-left: 0; }
-        .skills-section li {
-            margin-bottom: 1rem;
+        .badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #fff;
+            background: var(--primary);
+            border-radius: 3px;
+            padding: 0.05rem 0.4rem;
+            margin-left: 0.4rem;
+            vertical-align: 2px;
         }
-        .skills-section strong {
+        ul { padding-left: 1.2rem; margin: 0.35rem 0 0 0; }
+        li { margin-bottom: 0.3rem; }
+
+        .aside-list { list-style: none; padding-left: 0; }
+        .aside-list li { margin-bottom: 0.9rem; }
+        .aside-list strong {
             display: block;
-            margin-bottom: 0.3rem;
-            color: var(--primary);
+            margin-bottom: 0.15rem;
+            color: var(--primary-dark);
+        }
+        .aside-list .sub {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        @media print {
+            @page { size: A4; margin: 8mm 10mm; }
+            body { padding: 0; max-width: none; font-size: 8.4pt; line-height: 1.27; }
+            h1 { font-size: 21pt; }
+            .role { font-size: 10.5pt; margin: 2pt 0 5pt 0; }
+            .contact-info { font-size: 8.8pt; }
+            header { padding-bottom: 7pt; margin-bottom: 9pt; }
+            .summary { padding: 5pt 9pt; margin-bottom: 6pt; font-size: 8.4pt; }
+            .container { grid-template-columns: 2.5fr 1fr; gap: 14pt; }
+            h2 { font-size: 10pt; margin: 7pt 0 2pt 0; padding-bottom: 2pt; }
+            h3 { font-size: 9.4pt; margin-top: 5pt; }
+            .date { font-size: 8.6pt; }
+            .stack { font-size: 7.6pt; }
+            ul { margin-top: 2pt; }
+            li { margin-bottom: 1pt; }
+            .aside-list li { margin-bottom: 6pt; }
+            .aside-list .sub { font-size: 8.4pt; }
+            a { text-decoration: none; }
+            .item-header, li { break-inside: avoid; }
         }
     </style>
 </head>
@@ -110,77 +169,153 @@
 
     <header>
         <h1>Weronika Sobiech</h1>
+        <p class="role">Software Engineering Student @ 42 Warsaw &middot; Systems, Concurrency &amp; Applied AI</p>
         <div class="contact-info">
             <span>✉️ <a href="mailto:wweronika.sobiech@gmail.com">wweronika.sobiech@gmail.com</a></span>
             <span>📱 +48 601 246 246</span>
             <span>💻 <a href="https://github.com/Werka0202" target="_blank">github.com/Werka0202</a></span>
+            <span>🌐 <a href="https://cv-weronika.pages.dev" target="_blank">cv-weronika.pages.dev</a></span>
+            <span>📍 Warsaw, PL &middot; open to relocation (London, Lisbon, US)</span>
         </div>
     </header>
 
     <div class="summary">
-        Dedicated Software Engineering student at 42 Warsaw with a strong background in general management and operations. Transitioning from leading teams, optimizing budgets, and automating administrative processes to solving complex technical problems through code. Passionate about low-level programming, concurrency, and algorithms. Seeking a Software Engineering Internship at Cloudflare to leverage strong analytical skills, systems thinking, and the ability to thrive under time pressure in building resilient internet infrastructure.
+        Software Engineering student at 42 Warsaw who moved into code after three years running hospitality operations: teams, budgets, suppliers and the processes behind them. I build in C (threads, memory, scheduling) and Python (LLM tooling, data apps), I ship end-to-end products under hackathon pressure, and I'm active in the engineering community as a conference volunteer. Looking for a 2027 Software Engineering internship at Cloudflare to work on reliable, fast internet infrastructure.
     </div>
 
     <div class="container">
         <main>
             <section>
-                <h2>Education & Technical Projects</h2>
-                
-				<div class="item-header">
-                    <h3>42 Warsaw | Software Engineering Student</h3>
-                    <span class="date">Expected June 2028</span>
+                <h2>Projects</h2>
+
+                <div class="item-header">
+                    <h3><a href="https://github.com/Werka0202/Hackyeah" target="_blank">FamilyPantry</a> &middot; HackYeah 2026, Huawei challenge<span class="badge">Hackathon</span></h3>
+                    <span class="date">Oct 2026</span>
+                </div>
+                <p class="stack">ArkTS &middot; ArkUI &middot; HarmonyOS &middot; ArkData distributed KV &middot; Node tests</p>
+                <ul>
+                    <li>Built in 24 hours for Huawei's <em>"Imagine what's next"</em> task: a native HarmonyOS app that cuts household food waste across phone, tablet, watch and widget (~6.7k lines of ArkTS). It uses on-device receipt OCR, barcode scanning, family sync over a distributed KV store and expiry-first recipe planning, with planning logic covered by 35 unit tests.</li>
+                    <li>Jury average <strong>7.20 / 10 vs. 6.49</strong> average across all teams; highest score <strong>8.14 for quality of demonstration</strong>, 7.43 for originality and usefulness.</li>
+                    <li>Built with an AI-assisted workflow: Claude Code generated most of the code, and I wrote and fixed code by hand, made the product and architecture decisions, and verified everything. The workflow is documented in the public repo for reproducibility.</li>
+                </ul>
+
+                <div class="item-header">
+                    <h3><a href="https://dossier-werka.streamlit.app" target="_blank">Dossier</a> &middot; CRM for restaurants<span class="badge">In progress</span></h3>
+                    <span class="date">Sep 2026 – now</span>
+                </div>
+                <p class="stack">Python 3.12 &middot; Streamlit &middot; SQLite &middot; pandas &middot; Claude / Gemini APIs &middot; pytest</p>
+                <ul>
+                    <li>A guest-intelligence CRM drawing on my own restaurant-management experience. It merges reservation systems and POS bills into one guest database, with US (San Francisco) and Polish market modes.</li>
+                    <li>A connector layer with one adapter per reservation or POS system. LLM features parse email threads, with retries and fallback across models and per-visitor rate limits on the public demo.</li>
+                    <li>~8.6k lines of application code and 135 tests across 18 files, including UI smoke tests. Live demo above; the source is private and available on request.</li>
+                </ul>
+
+                <div class="item-header">
+                    <h3><a href="https://github.com/Werka0202/call_me_maybe" target="_blank">Call Me Maybe</a> &middot; constrained LLM decoding</h3>
+                    <span class="date">Sep 2026</span>
+                </div>
+                <p class="stack">Python &middot; numpy &middot; transformers &middot; pydantic &middot; mypy --strict</p>
+                <ul>
+                    <li>Turns natural-language requests into schema-valid JSON function calls using a small LLM (Qwen3-0.6B). At each decoding step, logits for tokens that would break the JSON grammar or the schema are masked out.</li>
+                    <li><strong>100% valid, schema-conformant output</strong>; correct function 11/11 times and all arguments correct 10/11 times. Fixed tokens are inserted directly instead of generated, which cuts model calls, and token-validity masks over the ~150k-token vocabulary are precomputed.</li>
+                </ul>
+
+                <div class="item-header">
+                    <h3><a href="https://github.com/Werka0202/codexion" target="_blank">Codexion</a> &middot; concurrency simulator in C</h3>
+                    <span class="date">Jun – Aug 2026</span>
+                </div>
+                <p class="stack">C &middot; POSIX threads &middot; mutexes &middot; condition variables &middot; Makefile</p>
+                <ul>
+                    <li>A dining-philosophers-style resource scheduler. Deadlocks are avoided through asymmetric lock ordering, and waiting uses <span class="tech-stack">pthread_cond</span> instead of busy loops.</li>
+                    <li>Supports <strong>FIFO and EDF (earliest-deadline-first)</strong> scheduling and resource cooldowns, with a 1 ms monitor thread. Data races are fixed with fine-grained per-resource mutexes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="item-header">
+                    <h3>42 Warsaw &middot; Software Engineering</h3>
+                    <span class="date">Expected 2028</span>
                 </div>
                 <ul>
-                    <li><strong>Codexion [WIP]:</strong> Developing a multi-threaded resource scheduling and concurrency simulator in C. Actively managing parallel execution using <span class="tech-stack">pthread</span> and preventing race conditions/deadlocks using <span class="tech-stack">pthread_mutex</span>. Implemented support for FIFO and EDF scheduling algorithms.</li>
-                    <li><strong>A-Maze-ing [Team Project]:</strong> Collaborated with a team of developers to build a Python-based maze generation algorithm. Engineered the logic to generate complex mazes and reliably export them into a strictly formatted hexadecimal output file. Managed version control workflows (Git) and technical responsibilities.</li>
-                    <li><strong>push_swap:</strong> Developed a highly optimized sorting algorithm using two stacks, focusing on minimizing the total number of operations and understanding time complexity (Big O notation).</li>
-                    <li><strong>libft & get_next_line:</strong> Recreated over 40 standard C library functions from scratch and programmed a function for reading lines from file descriptors, mastering memory allocation, pointers, and preventing memory leaks.</li>
+                    <li><strong>A-Maze-ing</strong> (team): maze generator in Python with strict hex export &middot; <strong>push_swap</strong>: two-stack sort that minimises operations &middot; <strong>libft &amp; get_next_line</strong>: 40+ libc functions rewritten from scratch, plus leak-free buffered reads from file descriptors.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Professional Experience</h2>
-                
+
                 <div class="item-header">
-                    <h3>General Manager | SPATIF</h3>
-                    <span class="date">Jun 2024 - Jun 2025</span>
+                    <h3>General Manager &middot; SPATIF, Warsaw</h3>
+                    <span class="date">Jun 2024 – Jun 2025</span>
                 </div>
                 <ul>
-                    <li>Implemented procedures to increase operational efficiency, successfully automating administrative processes.</li>
-                    <li>Supervised operational budgets and cost control, significantly increasing financial efficiency and eliminating unnecessary expenses.</li>
-                    <li>Managed relationships with key suppliers and partners, negotiating optimal terms and optimizing the supply chain.</li>
+                    <li>Ran a high-volume venue: budgets and cost control, supplier negotiations, and automated admin processes, including SQL reporting queries against the POS database (Firebird).</li>
                 </ul>
 
                 <div class="item-header">
-                    <h3>Manager | Peaches Gastro Girls & Klub SPATIF</h3>
-                    <span class="date">Sep 2022 - Jun 2024</span>
+                    <h3>Manager &middot; Peaches Gastro Girls &amp; Klub SPATIF</h3>
+                    <span class="date">Sep 2022 – Jun 2024</span>
                 </div>
                 <ul>
-                    <li>Managed complex financial settlements and billing processes between partner companies, ensuring high accuracy and precision.</li>
-                    <li>Coordinated large-scale events and exclusive venue reservations, optimizing resource utilization and ensuring client satisfaction.</li>
+                    <li>Handled settlements and invoicing between partner companies; coordinated large-scale events and exclusive bookings under time pressure.</li>
                 </ul>
             </section>
         </main>
 
         <aside>
-            <section class="skills-section">
+            <section>
                 <h2>Skills</h2>
-                <ul>
-                    <li>
-                        <strong>Languages & Technologies</strong>
-                        C, Python, Bash/Shell, Git, GitHub, Linux/Unix.
-                    </li>
-                    <li>
-                        <strong>Core Concepts</strong>
-                        Multithreading (pthreads, mutexes), Resource Allocation, Data Structures, Algorithms (Sorting, Optimization), Memory Management.
-                    </li>
-                    <li>
-                        <strong>Soft Skills</strong>
-                        Holistic thinking, Teamwork, Empathy, Initiative, Working under time pressure.
-                    </li>
+                <ul class="aside-list">
                     <li>
                         <strong>Languages</strong>
-                        English (C1), Polish (Native).
+                        C, Python, TypeScript / ArkTS, SQL, Bash
+                    </li>
+                    <li>
+                        <strong>Systems</strong>
+                        POSIX threads, mutexes &amp; condition variables, scheduling (FIFO, EDF), memory management, Linux/Unix
+                    </li>
+                    <li>
+                        <strong>Applied AI</strong>
+                        Constrained decoding, tokenizers, LLM APIs (Claude, Gemini), AI-assisted development
+                    </li>
+                    <li>
+                        <strong>Tools</strong>
+                        Git / GitHub, Make, uv, pytest, mypy, SQLite, Streamlit, Cloudflare Pages (hosts this CV)
+                    </li>
+                    <li>
+                        <strong>Soft skills</strong>
+                        Leading teams, stakeholder &amp; supplier management, working under pressure, holistic thinking
+                    </li>
+                    <li>
+                        <strong>Spoken languages</strong>
+                        English (C1), Polish (native)
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Community</h2>
+                <ul class="aside-list">
+                    <li>
+                        <strong>QCon San Francisco</strong>
+                        Volunteer
+                        <span class="sub">Nov 2026</span>
+                    </li>
+                    <li>
+                        <strong>Cloud Congress</strong>
+                        Attendee
+                        <span class="sub">Oct 2026</span>
+                    </li>
+                    <li>
+                        <strong>HackYeah 2026</strong>
+                        Participant, Huawei partner challenge
+                        <span class="sub">Oct 2026</span>
+                    </li>
+                    <li>
+                        <strong>Cybersecurity Congress</strong>
+                        Attendee: AI &amp; LLM security track, Warsaw
+                        <span class="sub">Sep 2026</span>
                     </li>
                 </ul>
             </section>
