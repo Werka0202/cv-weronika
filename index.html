@@ -164,6 +164,104 @@
             .item-header, li { break-inside: avoid; }
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style media="screen">
+        /* Cloudflare-inspired screen theme */
+        :root {
+            --primary: #f6821f;
+            --primary-dark: #d65f05;
+            --ink: #1d1f20;
+            --text: #36393a;
+            --muted: #6b7075;
+            --bg: #f5f5f4;
+            --card: #ffffff;
+            --line: #e6e6e3;
+            --code-bg: #fff3e8;
+        }
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+            background: var(--bg);
+            max-width: 1080px;
+            padding: 1.5rem 1rem 3rem;
+        }
+        header {
+            background: var(--ink);
+            color: #fff;
+            border: 0;
+            border-radius: 14px;
+            padding: 2.2rem 2.2rem 1.8rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute; inset: 0 0 auto 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f6821f, #fbad41);
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            right: -80px; top: -80px;
+            width: 260px; height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(246,130,31,.35), rgba(246,130,31,0) 70%);
+        }
+        h1 { color: #fff; font-weight: 800; letter-spacing: -0.02em; font-size: 2.8rem; }
+        .role { color: #fbad41; }
+        .contact-info { color: #d4d4d4; position: relative; z-index: 1; }
+        .contact-info a { color: #fff; }
+        .actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.3rem; position: relative; z-index: 1; }
+        .btn {
+            display: inline-block; padding: .55rem 1.1rem; border-radius: 8px;
+            font-weight: 600; font-size: .92rem; text-decoration: none;
+        }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-ghost { border: 1px solid #55595c; color: #fff; }
+        .btn-ghost:hover { border-color: #fff; }
+        .summary {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--primary);
+            border-radius: 10px;
+            margin-bottom: 1.2rem;
+        }
+        .container { gap: 1.2rem; }
+        section {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 1.4rem 1.6rem 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+        h2, section:first-child h2 {
+            margin: 0 0 .4rem 0;
+            border: 0;
+            padding: 0;
+            font-size: .82rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: .12em;
+        }
+        h3 { color: var(--ink); font-weight: 700; margin-top: 1.2rem; }
+        h3 a { color: var(--ink); border-bottom: 2px solid var(--primary); }
+        .stack, .tech-stack { font-family: "JetBrains Mono", ui-monospace, monospace; }
+        .stack { color: var(--primary-dark); }
+        .tech-stack { color: var(--primary-dark); }
+        li::marker { color: var(--primary); }
+        .aside-list strong { color: var(--ink); }
+        footer { text-align: center; color: var(--muted); font-size: .82rem; margin-top: .5rem; }
+        @media (max-width: 768px) {
+            header { padding: 1.6rem 1.2rem 1.4rem; }
+            section { padding: 1.1rem 1.1rem 1rem; }
+        }
+    </style>
+    <style media="print">
+        .actions, footer { display: none; }
+    </style>
 </head>
 <body>
 
@@ -176,6 +274,11 @@
             <span>💻 <a href="https://github.com/Werka0202" target="_blank">github.com/Werka0202</a></span>
             <span>🌐 <a href="https://cv-weronika.pages.dev" target="_blank">cv-weronika.pages.dev</a></span>
             <span>📍 Warsaw, PL &middot; open to relocation (London, Lisbon, US)</span>
+        </div>
+        <div class="actions">
+            <a class="btn btn-primary" href="Weronika_Sobiech_CV.pdf" download>Download PDF</a>
+            <a class="btn btn-ghost" href="https://github.com/Werka0202" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://dossier-werka.streamlit.app" target="_blank">Dossier demo</a>
         </div>
     </header>
 
@@ -321,6 +424,8 @@
             </section>
         </aside>
     </div>
+
+    <footer>Hand-written HTML &amp; CSS &middot; no framework</footer>
 
 </body>
 </html>

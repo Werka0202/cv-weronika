@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weronika Sobiech - CV (print)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --yellow: #ffe600;
+        --ink: #111111;
+        --text: #222222;
+        --muted: #5c5c5c;
+        --rule: #cfcfcf;
+    }
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #fff; }
+    body {
+        font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        font-size: 8.9pt;
+        line-height: 1.4;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .page {
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        padding: 0 11mm 9mm 11mm;
+        display: grid;
+        grid-template-columns: 56mm 1fr;
+        column-gap: 8mm;
+    }
+    a { color: inherit; text-decoration: none; }
+    b { font-weight: 700; color: var(--ink); }
+
+    /* ---- left column ---- */
+    .hi {
+        background: var(--yellow);
+        padding: 14mm 5mm 5mm 5mm;
+        margin-bottom: 5mm;
+    }
+    .hi .word {
+        font-size: 50pt;
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+    }
+    .hi .name {
+        margin-top: 4mm;
+        font-size: 15pt;
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--ink);
+    }
+    .hi .role {
+        margin-top: 1.5mm;
+        font-size: 8pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+    }
+    .block { margin-bottom: 5mm; }
+    .block.yellow { background: var(--yellow); padding: 0 4mm 3mm 4mm; }
+    .block.yellow h2 { border-top-color: var(--ink); }
+
+    h2 {
+        margin: 0 0 2mm 0;
+        padding-top: 1.6mm;
+        border-top: 2.4pt solid var(--ink);
+        font-size: 14pt;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+    }
+    .label {
+        display: block;
+        font-size: 7pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--ink);
+        margin-top: 2mm;
+    }
+    .label:first-of-type { margin-top: 0; }
+    .side p { margin: 0; }
+    .side .item { margin-bottom: 2mm; }
+    .side .item span { display: block; color: var(--muted); font-size: 8pt; }
+
+
+    /* ---- right column ---- */
+    main { padding-top: 14mm; }
+    .profile { font-size: 9.6pt; line-height: 1.45; margin: 0 0 5mm 0; color: var(--ink); }
+    .entry {
+        padding: 2.2mm 0 2.4mm 0;
+        border-bottom: 0.6pt solid var(--rule);
+    }
+    .entry:last-child { border-bottom: 0; }
+    .entry .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 3mm;
+    }
+    .entry h3 {
+        margin: 0;
+        font-size: 10.2pt;
+        font-weight: 800;
+        color: var(--ink);
+    }
+    .entry h3 .what { font-weight: 500; }
+    .entry .when {
+        font-size: 7.4pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+    }
+    .entry .stack {
+        margin: 0.4mm 0 0.8mm 0;
+        font-size: 7.4pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+    }
+    .hl { background: var(--yellow); padding: 0 1mm; }
+    ul { margin: 0; padding-left: 3.8mm; }
+    li { margin-bottom: 0.7mm; }
+    li::marker { color: var(--ink); }
+    section { margin-bottom: 4mm; }
+</style>
+</head>
+<body>
+<div class="page">
+
+    <aside class="side">
+        <div class="hi">
+            <div class="word">hi!</div>
+            <div class="name">I'm Weronika<br>Sobiech.</div>
+            <div class="role">Software Engineering<br>student @ 42 Warsaw</div>
+        </div>
+
+        <div class="block">
+            <h2>Contact</h2>
+            <span class="label">Email</span><p>wweronika.sobiech@gmail.com</p>
+            <span class="label">Phone</span><p>+48 601 246 246</p>
+            <span class="label">GitHub</span><p><a href="https://github.com/Werka0202">github.com/Werka0202</a></p>
+            <span class="label">Web</span><p><a href="https://cv-weronika.pages.dev">cv-weronika.pages.dev</a></p>
+            <span class="label">Location</span><p>Warsaw, PL. Open to relocation:<br>London, Lisbon, US</p>
+        </div>
+
+        <div class="block yellow">
+            <h2>Skills</h2>
+            <span class="label">Programming</span><p>C, Python, SQL, Bash, TypeScript / ArkTS</p>
+            <span class="label">Systems</span><p>pthreads, mutexes, condition variables, FIFO/EDF scheduling, memory management, Linux</p>
+            <span class="label">Applied AI</span><p>constrained decoding, tokenizers, Claude &amp; Gemini APIs</p>
+            <span class="label">Tools</span><p>Git, Make, uv, pytest, mypy, SQLite, Streamlit</p>
+        </div>
+
+        <div class="block">
+            <h2>Community</h2>
+            <div class="item"><b>QCon San Francisco</b>, volunteer<span>Nov 2026</span></div>
+            <div class="item"><b>Cloud Congress</b>, attendee<span>Oct 2026</span></div>
+            <div class="item"><b>HackYeah 2026</b>, Huawei track<span>Oct 2026</span></div>
+            <div class="item"><b>Cybersecurity Congress</b>, AI &amp; LLM security<span>Sep 2026, Warsaw</span></div>
+        </div>
+
+        <div class="block">
+            <h2>Languages</h2>
+            <p><b>English</b>, C1<br><b>Polish</b>, native</p>
+        </div>
+    </aside>
+
+    <main>
+        <p class="profile">I moved into software after three years running hospitality operations: teams, budgets and suppliers. Now I build in <b>C</b> (threads, memory, scheduling) and <b>Python</b> (LLM tooling, data apps) and ship end-to-end products under pressure. I'm looking for a <span class="hl"><b>2027 Software Engineering internship</b></span> at Cloudflare.</p>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="entry">
+                <div class="head"><h3><a href="https://github.com/Werka0202/Hackyeah">FamilyPantry</a> <span class="what">· HackYeah 2026, Huawei</span></h3><span class="when">Oct 2026</span></div>
+                <div class="stack">ArkTS · ArkUI · HarmonyOS · distributed KV store</div>
+                <ul>
+                    <li>A native HarmonyOS app against household food waste, built in 24 h for the <i>"Imagine what's next"</i> challenge. It runs on phone, tablet, watch and widget (~6.7k lines), with on-device receipt OCR, barcode scanning and family sync, and 35 unit tests.</li>
+                    <li>Jury average <span class="hl"><b>7.20 / 10 vs. 6.49</b></span> for all teams, with the top score of <b>8.14 for quality of demonstration</b>.</li>
+                    <li>AI-assisted: Claude Code wrote most of the code. I wrote and fixed code by hand, made the product and architecture calls, and verified everything.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="head"><h3><a href="https://dossier-werka.streamlit.app">Dossier</a> <span class="what">· CRM for restaurants</span></h3><span class="when">Sep 2026 – now</span></div>
+                <div class="stack">Python · Streamlit · SQLite · pandas · Claude/Gemini APIs · pytest</div>
+                <ul>
+                    <li>A guest CRM based on my own restaurant experience. It merges reservation and POS data into one guest database, with US and Polish market modes.</li>
+                    <li>A connector per system, LLM email parsing with model fallback, and per-visitor rate limits. <b>~8.6k lines, 135 tests</b>, live demo; the code is private and available on request.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="head"><h3><a href="https://github.com/Werka0202/call_me_maybe">Call Me Maybe</a> <span class="what">· constrained LLM decoding</span></h3><span class="when">Sep 2026</span></div>
+                <div class="stack">Python · numpy · transformers · pydantic · mypy --strict</div>
+                <ul>
+                    <li>Turns natural language into JSON function calls with Qwen3-0.6B by masking the logits of tokens that would break the schema at each step.</li>
+                    <li><span class="hl"><b>100% valid output</b></span>; correct function 11/11, all arguments correct 10/11. Fixed tokens are injected and vocabulary masks precomputed.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="head"><h3><a href="https://github.com/Werka0202/codexion">Codexion</a> <span class="what">· concurrency simulator in C</span></h3><span class="when">Jun – Aug 2026</span></div>
+                <div class="stack">C · POSIX threads · mutexes · condition variables</div>
+                <ul>
+                    <li>A pthreads resource scheduler: deadlock avoidance through lock ordering, condition variables instead of busy waiting, <b>FIFO and EDF</b> scheduling, and per-resource mutexes against data races.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="head"><h3>42 Warsaw <span class="what">· Software Engineering</span></h3><span class="when">Expected 2028</span></div>
+                <ul><li>Peer-to-peer, project-based. Projects include A-Maze-ing (team, Python), push_swap (operation-minimising sort), and libft &amp; get_next_line (40+ libc functions, leak-free file reads).</li></ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="entry">
+                <div class="head"><h3>General Manager <span class="what">· SPATIF, Warsaw</span></h3><span class="when">Jun 2024 – Jun 2025</span></div>
+                <ul><li>Ran a high-volume venue: budgets and cost control, supplier negotiations, and automated admin processes, including SQL reporting on the POS database.</li></ul>
+            </div>
+            <div class="entry">
+                <div class="head"><h3>Manager <span class="what">· Peaches Gastro Girls &amp; Klub SPATIF</span></h3><span class="when">Sep 2022 – Jun 2024</span></div>
+                <ul><li>Handled settlements and invoicing between partner companies; coordinated large events under time pressure.</li></ul>
+            </div>
+        </section>
+    </main>
+
+</div>
+</body>
+</html>
